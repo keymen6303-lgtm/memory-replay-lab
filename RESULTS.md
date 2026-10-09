@@ -1,6 +1,8 @@
-# Results and interpretation
+# Research results and interpretation
 
-These are original local stage 7–9 result snapshots, not new independent replications performed by external researchers. The repository preserves the original model and protocol files. Each stage uses different confirmation seeds, so do not interpret differences between stage means as paired interventions.
+Research author: [Keymen](https://github.com/keymen6303-lgtm).
+
+These results document stages 7–9 of my associative-memory research. They have been reproduced locally; independent external replication remains to be done. The repository preserves the original model and protocol files. Each stage uses different confirmation seeds, so do not interpret differences between stage means as paired interventions.
 
 ## Stage 7: energy-guided selection
 

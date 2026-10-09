@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "Please cite this software and the original model papers when using this toolkit."
-title: "Memory Replay Lab: replay, recognition and source-geometry diagnostics"
+title: "Keymen’s Memory Replay Lab: replay, recognition and source-geometry diagnostics"
 type: software
-version: 0.1.0
+version: 0.1.1
 date-released: 2026-10-10
 authors:
-  - name: "Memory Replay Lab contributors"
+  - name: "Keymen (keymen6303-lgtm)"
 repository-code: "https://github.com/keymen6303-lgtm/memory-replay-lab"
 license: MIT

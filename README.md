@@ -1,8 +1,10 @@
-# Memory Replay Lab
+# Keymen’s Memory Replay Lab
+
+Research author and maintainer: [Keymen](https://github.com/keymen6303-lgtm).
 
 [中文说明](README.zh-CN.md) · [Results and limits](RESULTS.md) · [Prior work](REFERENCES.md)
 
-A CPU research toolkit for examining **replay selection, recognition readouts, and replay-source geometry** in a closed-form modern Hopfield memory. It separates partial-cue identity recovery from false recognition of similar unseen inputs, keeps replay budgets matched, and freezes recognition thresholds using calibration seeds before evaluating separate confirmation seeds.
+My research project examining **replay selection, recognition readouts, and replay-source geometry** in a closed-form modern Hopfield memory. It separates partial-cue identity recovery from false recognition of similar unseen inputs, keeps replay budgets matched, and freezes recognition thresholds using calibration seeds before evaluating separate confirmation seeds.
 
 The useful contribution is a small, auditable diagnostic experiment suite, including negative results. The memory equation and energy-guided replay idea come from prior work. This repository does **not** establish a new human memory mechanism, global novelty, or a superior practical memory system.
 
@@ -26,7 +28,7 @@ python demo.py
 
 The demo runs one synthetic seed and prints source/readout diagnostics. It is a smoke example, **not** a replacement for the confirmation study.
 
-For the exact package versions used for the stored results, use `requirements-reproduction.txt`. The broader ranges in `requirements.txt` are for portability; installing another version does not promise bitwise reproduction. Only the current macOS/Python 3.12 environment was locally validated at release preparation. The included CI checks should be read from their actual run status.
+For the exact package versions used for the stored results, use `requirements-reproduction.txt`. The broader ranges in `requirements.txt` are for portability; installing another version does not promise bitwise reproduction. The complete stage-9 reproduction was validated locally on macOS/Python 3.12. GitHub Actions also passed the 20 checks and demo on Linux and macOS ([run record](https://github.com/keymen6303-lgtm/memory-replay-lab/actions/runs/37976039027)); CI does not run the complete confirmation studies.
 
 ## Full experiments
 
@@ -58,7 +60,7 @@ The cache checks source, protocol and configuration fingerprints; stages 8/9 als
 - `outputs/literature/`: dated literature-search snapshots, including what was actually read and the limits of the novelty search.
 - `tests/`: 20 scientific/engineering checks for gradients, identities, budgets, read-only recognition, calibration isolation and cache integrity.
 
-The public subset covers stages 7–9 of a larger local study. Earlier human-data analyses, raw human data, machine paths and intermediate archives are not part of this release. Model/protocol files are preserved unchanged; the public packaging adds documentation, dependencies, a demo and CI.
+This repository presents stages 7–9 of my associative-memory research: model replication, readout diagnostics and replay-source controls. It contains the complete implementations and protocols for these experiments, compact reference results, documentation, dependencies, a demo and CI. The earlier human-data analysis is outside the scope of this repository.
 
 ## Interpretation
 
