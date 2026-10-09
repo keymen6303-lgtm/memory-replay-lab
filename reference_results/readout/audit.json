@@ -1,0 +1,19 @@
+{
+  "query_read_only": true,
+  "novel_training_collision_count": 0,
+  "normalization_max_error": 2.7755575615628914e-16,
+  "normalized_update_max_error": 2.220446049250313e-16,
+  "decomposition_max_error": 0.0,
+  "normalized_judgment_disagreements": 0,
+  "normalized_auc_max_error": 0.0,
+  "event_budget_correct": true,
+  "stored_vector_unit_max_error": 5.551115123125783e-16,
+  "nonfinite_score_count": 0,
+  "baseline_score_matches_no_replay": true,
+  "all_required_checks_pass": true,
+  "cases": 60,
+  "query_rows": 216000,
+  "partial_rows": 24000,
+  "decomposition_rows": 54000,
+  "event_rows": 11520
+}

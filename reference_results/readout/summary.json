@@ -1,0 +1,194 @@
+{
+  "primary_arm": "high_energy",
+  "primary_angle": 0.24,
+  "confirmation_seeds": 40,
+  "primary_means": [
+    {
+      "arm": "high_energy",
+      "readout": "equal",
+      "angle": 0.24,
+      "auc": 0.77624,
+      "false_alarm": 0.3365,
+      "hit": 0.867,
+      "unrelated_false_alarm": 0.0,
+      "task2_hit": 1.0,
+      "identity": 0.0475,
+      "partial_mse": 0.010434871423112295,
+      "full_convergence": 1.0
+    },
+    {
+      "arm": "high_energy",
+      "readout": "max_similarity",
+      "angle": 0.24,
+      "auc": 0.7887799999999999,
+      "false_alarm": 0.327,
+      "hit": 0.861,
+      "unrelated_false_alarm": 0.0,
+      "task2_hit": 1.0,
+      "identity": 0.0475,
+      "partial_mse": 0.010434871423112295,
+      "full_convergence": 1.0
+    },
+    {
+      "arm": "high_energy",
+      "readout": "reconstruction",
+      "angle": 0.24,
+      "auc": 0.63534,
+      "false_alarm": 0.639,
+      "hit": 0.8640000000000001,
+      "unrelated_false_alarm": 0.0,
+      "task2_hit": 0.9209999999999999,
+      "identity": 0.0475,
+      "partial_mse": 0.010434871423112295,
+      "full_convergence": 1.0
+    },
+    {
+      "arm": "high_energy",
+      "readout": "weighted",
+      "angle": 0.24,
+      "auc": 0.77568,
+      "false_alarm": 0.3395,
+      "hit": 0.867,
+      "unrelated_false_alarm": 0.0,
+      "task2_hit": 1.0,
+      "identity": 0.0475,
+      "partial_mse": 0.010434871423112295,
+      "full_convergence": 1.0
+    }
+  ],
+  "primary_effects": [
+    {
+      "arm": "high_energy",
+      "angle": 0.24,
+      "readout": "equal",
+      "metric": "auc",
+      "mean": 0.0005600000000000021,
+      "low": 0.00010000000000000009,
+      "high": 0.0011000000000000012,
+      "confidence": 0.9944444444444445,
+      "primary": true,
+      "seeds": 40
+    },
+    {
+      "arm": "high_energy",
+      "angle": 0.24,
+      "readout": "equal",
+      "metric": "false_alarm",
+      "mean": -0.003,
+      "low": -0.006999999999999999,
+      "high": 0.0005000000000000019,
+      "confidence": 0.9944444444444445,
+      "primary": true,
+      "seeds": 40
+    },
+    {
+      "arm": "high_energy",
+      "angle": 0.24,
+      "readout": "equal",
+      "metric": "hit",
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "confidence": 0.9944444444444445,
+      "primary": true,
+      "seeds": 40
+    },
+    {
+      "arm": "high_energy",
+      "angle": 0.24,
+      "readout": "reconstruction",
+      "metric": "auc",
+      "mean": -0.14034,
+      "low": -0.15116000000000002,
+      "high": -0.12964000000000003,
+      "confidence": 0.9944444444444445,
+      "primary": true,
+      "seeds": 40
+    },
+    {
+      "arm": "high_energy",
+      "angle": 0.24,
+      "readout": "reconstruction",
+      "metric": "false_alarm",
+      "mean": 0.2995,
+      "low": 0.27149999999999996,
+      "high": 0.32849999999999996,
+      "confidence": 0.9944444444444445,
+      "primary": true,
+      "seeds": 40
+    },
+    {
+      "arm": "high_energy",
+      "angle": 0.24,
+      "readout": "reconstruction",
+      "metric": "hit",
+      "mean": -0.0030000000000000053,
+      "low": -0.037,
+      "high": 0.02899999999999999,
+      "confidence": 0.9944444444444445,
+      "primary": true,
+      "seeds": 40
+    },
+    {
+      "arm": "high_energy",
+      "angle": 0.24,
+      "readout": "max_similarity",
+      "metric": "auc",
+      "mean": 0.013099999999999976,
+      "low": 0.007277722222222184,
+      "high": 0.020199999999999985,
+      "confidence": 0.9944444444444445,
+      "primary": true,
+      "seeds": 40
+    },
+    {
+      "arm": "high_energy",
+      "angle": 0.24,
+      "readout": "max_similarity",
+      "metric": "false_alarm",
+      "mean": -0.012499999999999995,
+      "low": -0.021056944444444694,
+      "high": -0.0045,
+      "confidence": 0.9944444444444445,
+      "primary": true,
+      "seeds": 40
+    },
+    {
+      "arm": "high_energy",
+      "angle": 0.24,
+      "readout": "max_similarity",
+      "metric": "hit",
+      "mean": -0.006,
+      "low": -0.025,
+      "high": 0.013999999999999985,
+      "confidence": 0.9944444444444445,
+      "primary": true,
+      "seeds": 40
+    }
+  ],
+  "decisions": [
+    {
+      "readout": "equal",
+      "auc_improvement": true,
+      "false_alarm_reduction": false,
+      "hit_noninferior": true,
+      "joint_pass": false
+    },
+    {
+      "readout": "reconstruction",
+      "auc_improvement": false,
+      "false_alarm_reduction": false,
+      "hit_noninferior": false,
+      "joint_pass": false
+    },
+    {
+      "readout": "max_similarity",
+      "auc_improvement": true,
+      "false_alarm_reduction": true,
+      "hit_noninferior": false,
+      "joint_pass": false
+    }
+  ],
+  "all_primary_intervals": 9,
+  "bootstrap": 50000
+}

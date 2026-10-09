@@ -1,0 +1,142 @@
+{
+  "created_utc": "2026-10-09T17:08:23.312844+00:00",
+  "fingerprint": {
+    "sha256": "281b4b562fbf26121f6abdbd1bb50b73e47e5f722e3150e3d02aff8cdb11af0b",
+    "sources": {
+      "src/energy.py": "a312f9c1d05b1bb09c269320f6aea133681c86829d00b01c5838a39819682f4d",
+      "src/readout.py": "5054a97206be2a58258af101cc6d5be46a035da70c4c42d29405ae31f32b4343",
+      "readout_protocol.md": "17d561511c2bddc64a993ad6eb2cd8712603abf8175d025b1273a53a17033774"
+    },
+    "config": {
+      "n": 24,
+      "c": 0.35,
+      "primary_angle": 0.24,
+      "beta": 8.0,
+      "readouts": [
+        "weighted",
+        "equal",
+        "reconstruction",
+        "max_similarity"
+      ],
+      "calibration_seeds": [
+        20271001,
+        20271002,
+        20271003,
+        20271004,
+        20271005,
+        20271006,
+        20271007,
+        20271008,
+        20271009,
+        20271010,
+        20271011,
+        20271012,
+        20271013,
+        20271014,
+        20271015,
+        20271016,
+        20271017,
+        20271018,
+        20271019,
+        20271020
+      ],
+      "confirmation_seeds": [
+        20272001,
+        20272002,
+        20272003,
+        20272004,
+        20272005,
+        20272006,
+        20272007,
+        20272008,
+        20272009,
+        20272010,
+        20272011,
+        20272012,
+        20272013,
+        20272014,
+        20272015,
+        20272016,
+        20272017,
+        20272018,
+        20272019,
+        20272020,
+        20272021,
+        20272022,
+        20272023,
+        20272024,
+        20272025,
+        20272026,
+        20272027,
+        20272028,
+        20272029,
+        20272030,
+        20272031,
+        20272032,
+        20272033,
+        20272034,
+        20272035,
+        20272036,
+        20272037,
+        20272038,
+        20272039,
+        20272040
+      ],
+      "threshold_quantile": 0.1,
+      "bootstrap": 50000,
+      "bootstrap_seed": 2026101008,
+      "primary_intervals": 9,
+      "noninferiority_margin": 0.01,
+      "energy_configuration": {
+        "d": 64,
+        "beta": 8.0,
+        "epsilon": 0.05,
+        "slots": 8,
+        "events": 64,
+        "gain": 0.25,
+        "angles": [
+          0.12,
+          0.24,
+          0.48
+        ],
+        "directions": 2,
+        "views": 4,
+        "retained": 16,
+        "tol": 1e-10,
+        "max_iter": 500,
+        "replication_seed": 20268001,
+        "replication_rotations": 2000,
+        "primary_n": 24,
+        "primary_c": 0.35,
+        "primary_angle": 0.24
+      }
+    }
+  },
+  "thresholds": {
+    "no_replay": {
+      "weighted": 0.4700056761700349,
+      "equal": 0.4700056761700349,
+      "reconstruction": -0.01079671522226956,
+      "max_similarity": 0.9527462797623792
+    },
+    "random_replay": {
+      "weighted": 0.4851632157364295,
+      "equal": 0.4791710501628479,
+      "reconstruction": -0.010786681847872332,
+      "max_similarity": 0.9552961111896819
+    },
+    "high_energy": {
+      "weighted": 0.48520106709180744,
+      "equal": 0.4795963985953772,
+      "reconstruction": -0.010792902982437728,
+      "max_similarity": 0.955345222595784
+    },
+    "low_energy": {
+      "weighted": 0.4847592051945519,
+      "equal": 0.4783665921146489,
+      "reconstruction": -0.010768023303885228,
+      "max_similarity": 0.9550931073590225
+    }
+  },
+  "method": "500 calibration old targets per arm/readout, q.1 linear"
+}

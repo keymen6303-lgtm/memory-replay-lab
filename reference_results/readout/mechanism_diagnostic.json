@@ -1,0 +1,48 @@
+{
+  "status": "预定缓存分层的描述统计；几何阈值示例为探索性，未用于调参或替换冻结阈值",
+  "readouts": [
+    {
+      "readout": "weighted",
+      "buffered_lures": 640,
+      "buffered_false_alarm": 1.0,
+      "unbuffered_false_alarm": 0.028676470588235293,
+      "all_false_alarms": 679,
+      "buffered_false_alarms": 640,
+      "buffered_fraction_of_errors": 0.9425625920471281
+    },
+    {
+      "readout": "equal",
+      "buffered_lures": 640,
+      "buffered_false_alarm": 1.0,
+      "unbuffered_false_alarm": 0.02426470588235294,
+      "all_false_alarms": 673,
+      "buffered_false_alarms": 640,
+      "buffered_fraction_of_errors": 0.950965824665676
+    },
+    {
+      "readout": "reconstruction",
+      "buffered_lures": 640,
+      "buffered_false_alarm": 1.0,
+      "unbuffered_false_alarm": 0.46911764705882353,
+      "all_false_alarms": 1278,
+      "buffered_false_alarms": 640,
+      "buffered_fraction_of_errors": 0.5007824726134585
+    },
+    {
+      "readout": "max_similarity",
+      "buffered_lures": 640,
+      "buffered_false_alarm": 1.0,
+      "unbuffered_false_alarm": 0.010294117647058823,
+      "all_false_alarms": 654,
+      "buffered_false_alarms": 640,
+      "buffered_fraction_of_errors": 0.9785932721712538
+    }
+  ],
+  "cosine_theta": 0.9713379748520296,
+  "max_similarity_frozen_threshold": 0.955345222595784,
+  "unbuffered_old_count": 680,
+  "unbuffered_old_below_lure_cosine": 648,
+  "descriptive_hit_at_cosine_plus_tolerance": 0.352,
+  "tolerance": 1e-12,
+  "warning": "不是确认后的新优化阈值，也不是人类记忆结论"
+}
