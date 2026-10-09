@@ -1,0 +1,168 @@
+{
+  "created_utc": "2026-10-09T17:47:05.473555+00:00",
+  "fingerprint": {
+    "sha256": "37a66362c3cae12e2f2e17a0dea1e583be26bf4d16ad5e9c887f46bc10ce9444",
+    "files": {
+      "src/energy.py": "a312f9c1d05b1bb09c269320f6aea133681c86829d00b01c5838a39819682f4d",
+      "src/fidelity.py": "5d8d872c88c05fd3d93f0d33258797d343600db3a9a6b9272c0275f6075e9d56",
+      "fidelity_protocol.md": "8a72bb21041858a804a9d7a834a4d28c6fe9491fdd415511b15f97c39d9119b2"
+    },
+    "configuration": {
+      "n": 24,
+      "c": 0.35,
+      "primary_angle": 0.24,
+      "readouts": [
+        "weighted",
+        "max_similarity"
+      ],
+      "sources": [
+        "exact",
+        "coherent",
+        "independent"
+      ],
+      "arms": [
+        "random_replay",
+        "high_energy",
+        "low_energy"
+      ],
+      "calibration_seeds": [
+        20273001,
+        20273002,
+        20273003,
+        20273004,
+        20273005,
+        20273006,
+        20273007,
+        20273008,
+        20273009,
+        20273010,
+        20273011,
+        20273012,
+        20273013,
+        20273014,
+        20273015,
+        20273016,
+        20273017,
+        20273018,
+        20273019,
+        20273020
+      ],
+      "confirmation_seeds": [
+        20274001,
+        20274002,
+        20274003,
+        20274004,
+        20274005,
+        20274006,
+        20274007,
+        20274008,
+        20274009,
+        20274010,
+        20274011,
+        20274012,
+        20274013,
+        20274014,
+        20274015,
+        20274016,
+        20274017,
+        20274018,
+        20274019,
+        20274020,
+        20274021,
+        20274022,
+        20274023,
+        20274024,
+        20274025,
+        20274026,
+        20274027,
+        20274028,
+        20274029,
+        20274030,
+        20274031,
+        20274032,
+        20274033,
+        20274034,
+        20274035,
+        20274036,
+        20274037,
+        20274038,
+        20274039,
+        20274040
+      ],
+      "threshold_quantile": 0.1,
+      "bootstrap": 50000,
+      "bootstrap_seed": 2026101009,
+      "primary_intervals": 14,
+      "hit_margin": 0.01,
+      "identity_margin": 0.0025,
+      "task2_margin": 0.01,
+      "independent_rng_tag": 617,
+      "energy_configuration": {
+        "d": 64,
+        "beta": 8.0,
+        "epsilon": 0.05,
+        "slots": 8,
+        "events": 64,
+        "gain": 0.25,
+        "angles": [
+          0.12,
+          0.24,
+          0.48
+        ],
+        "directions": 2,
+        "views": 4,
+        "retained": 16,
+        "tol": 1e-10,
+        "max_iter": 500,
+        "replication_seed": 20268001,
+        "replication_rotations": 2000,
+        "primary_n": 24,
+        "primary_c": 0.35,
+        "primary_angle": 0.24
+      }
+    }
+  },
+  "thresholds": {
+    "none__no_replay": {
+      "weighted": 0.46979535339152095,
+      "max_similarity": 0.952196440131964
+    },
+    "exact__random_replay": {
+      "weighted": 0.48343719558877996,
+      "max_similarity": 0.953465604787943
+    },
+    "exact__high_energy": {
+      "weighted": 0.48371440478982014,
+      "max_similarity": 0.953465604787943
+    },
+    "exact__low_energy": {
+      "weighted": 0.4834256579901476,
+      "max_similarity": 0.953465604787943
+    },
+    "coherent__random_replay": {
+      "weighted": 0.4816836725037833,
+      "max_similarity": 0.952196440131964
+    },
+    "coherent__high_energy": {
+      "weighted": 0.48238457532322887,
+      "max_similarity": 0.952196440131964
+    },
+    "coherent__low_energy": {
+      "weighted": 0.480955062066954,
+      "max_similarity": 0.952196440131964
+    },
+    "independent__random_replay": {
+      "weighted": 0.48242682546288645,
+      "max_similarity": 0.952196440131964
+    },
+    "independent__high_energy": {
+      "weighted": 0.48268152306245854,
+      "max_similarity": 0.952196440131964
+    },
+    "independent__low_energy": {
+      "weighted": 0.48240695238617537,
+      "max_similarity": 0.952196440131964
+    }
+  },
+  "method": "500 calibration old targets per group/readout; q.1 linear"
+}

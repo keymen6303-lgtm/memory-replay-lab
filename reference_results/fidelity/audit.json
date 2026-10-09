@@ -1,0 +1,26 @@
+{
+  "query_read_only": true,
+  "exact_matches_original": true,
+  "selected_ids_and_events_equal": true,
+  "matched_memory_bytes": true,
+  "event_budget_correct": true,
+  "expected_support_counts": true,
+  "nonfinite_scores": 0,
+  "novel_training_collisions": 0,
+  "independent_cosine_max_error": 6.661338147750939e-16,
+  "unit_norm_max_error": 4.440892098500626e-16,
+  "coherent_max_similarity_error": 0.0,
+  "coherent_max_judgment_disagreements": 0,
+  "coherent_collapsed_max_error": 2.220446049250313e-16,
+  "coherent_thresholds_equal": true,
+  "partial_nonconvergence_count": 0,
+  "cases": 60,
+  "rows": {
+    "queries": 270000,
+    "partial": 60000,
+    "events": 34560,
+    "resources": 600,
+    "geometry": 4320
+  },
+  "all_required_checks_pass": true
+}
