@@ -204,15 +204,16 @@ exact逐数组复用原模型核验通过；跨源编号与事件相同，64事�
         text+=f'''\n## 已完成的工程核验
 
 全项目测试：{tests}；独立包测试：{export_tests}。独立项目从零重算{len(v['exact_tables'])}张CSV、{v['raw_npz_files']}个NPZ中的{v['exact_raw_arrays']}个数组及冻结阈值完全一致；资源表除运行时长外相同。全部已保存判定和校准阈值由分数重建通过，确认案例创建时间晚于阈值冻结。断点继续{continuation['resume_cache_hits']}/60例命中，冻结哈希不变；{preservation['checked_existing_output_files']}个既有outputs文件哈希未变。核验仅为当前机器既有环境。查新记录是执行前的候选快照，其中“尚未执行”描述的是当时状态；本报告及运行记录给出当前已执行结果。\n'''
+    text = text.replace('\n', '\n\n研究作者：Keymen（keymen6303-lgtm）。\n', 1)
     (reports/'回放源精度研究报告.md').write_text(text,encoding='utf-8')
-    (reports/'结论摘要.md').write_text('# 第九阶段结论\n\n'+headline+'\n\n'+main_table+'\n高能量相对随机的小收益在两种源中分别得到支持，但整体恢复仍很低。最大相似度与变形源的组合为探索性结果，误认降低伴有旧命中代价。仅限合成人工模型，没有新增人类机制证据。\n',encoding='utf-8')
+    (reports/'结论摘要.md').write_text('# 第九阶段结论\n\n研究作者：Keymen（keymen6303-lgtm）。\n\n'+headline+'\n\n'+main_table+'\n高能量相对随机的小收益在两种源中分别得到支持，但整体恢复仍很低。最大相似度与变形源的组合为探索性结果，误认降低伴有旧命中代价。仅限合成人工模型，没有新增人类机制证据。\n',encoding='utf-8')
     shutil.copyfile(ROOT/'fidelity_protocol.md',reports/'实验协议.md')
     for name,target in [('第九阶段候选_逐轮查新记录.json','查新记录.json'),('研究方向查新规则.json','研究方向查新规则.json')]:
         shutil.copyfile(ROOT/'outputs/literature'/name,reports/target)
     environment=dict(python=sys.version,platform=platform.platform(),dependencies={name:importlib.metadata.version(name) for name in ['numpy','scipy','pandas','matplotlib','scikit-learn','pytest','threadpoolctl']})
     (tables/'environment.json').write_text(json.dumps(environment,ensure_ascii=False,indent=2),encoding='utf-8')
     figures=[('primary_source_controls.png','主结果：三个源条件'),('primary_intervals.png','源变化的五项主终点区间'),('selection_effects.png','高能量相对随机的效果'),('source_readout_diagnostic.png','源与读出的探索性组合'),('buffered_lures.png','错误是否仍集中于回放内容附近'),('lure_score_distributions.png','变形后分数是否仍跨过阈值')]
-    page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第九阶段：回放源精度研究结果</title><style>body{font:17px/1.8 system-ui,sans-serif;max-width:1120px;margin:35px auto;padding:0 24px;color:#243649}h1,h2{line-height:1.4}img{width:100%;height:auto;margin:15px 0}pre{white-space:pre-wrap;background:#f4f7fa;padding:18px;font-size:14px}.note{background:#eef5fa;border-left:5px solid #357099;padding:20px}a{color:#1b6199}li{margin:8px 0}</style><h1>回放副本变形后：主读出的误认仍然存在</h1><p>第九阶段 · 20个校准种子 + 40个新确认种子 · 真实运行结果</p>'''
+    page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第九阶段：回放源精度研究结果</title><style>body{font:17px/1.8 system-ui,sans-serif;max-width:1120px;margin:35px auto;padding:0 24px;color:#243649}h1,h2{line-height:1.4}img{width:100%;height:auto;margin:15px 0}pre{white-space:pre-wrap;background:#f4f7fa;padding:18px;font-size:14px}.note{background:#eef5fa;border-left:5px solid #357099;padding:20px}a{color:#1b6199}li{margin:8px 0}</style><h1>回放副本变形后：主读出的误认仍然存在</h1><p>研究作者：Keymen（keymen6303-lgtm）</p><p>第九阶段 · 20个校准种子 + 40个新确认种子 · 真实运行结果</p>'''
     page+='<p class="note"><b>'+html.escape(headline)+'</b><br>精确与等幅独立方向源的误认均34.50%；来源变化并未让原判断方式获得联合改善。高能量选择仍有小幅收益，但部分恢复仅约4.5%。本结果修正了上一轮解释，不能证明人脑机制。</p>'
     page+='<h2>主要数字</h2><pre>'+html.escape(main_table)+'</pre><h2>关键解释</h2><p>去掉精确副本没有消除加权能量下回放内640条相似新输入的误认。最大相似度下误认明显减少，但旧命中也下降，且该比较为探索性。不能把主失败换成探索成功。相同旋转副本减少独立支持点数量，最大相似度与无回放完全相同属于已知恒等式。</p>'
     for name,title in figures:page+='<h2>'+html.escape(title)+'</h2><img src="figures/'+name+'" alt="'+html.escape(title)+'">'

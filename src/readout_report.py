@@ -217,8 +217,9 @@ def generate():
 
 运行：`python run_readout.py`；已有冻结结果用`python run_readout.py --resume`。源码和协议哈希锁定，缓存校验数据哈希。测试、独立导出重跑、前七阶段保留核验分别见同目录的实际核验文件。
 '''
+    report = report.replace('\n', '\n\n研究作者：Keymen（keymen6303-lgtm）。\n', 1)
     (reports/'固定记忆读出诊断研究报告.md').write_text(report,encoding='utf-8')
-    (reports/'结论摘要.md').write_text('# 第八阶段结论摘要\n\n'+headline+'\n\n'+number_table+'\n'+decisions+'\n\n换读出不改变回忆能力；所有结论限于本合成人工模型。\n',encoding='utf-8')
+    (reports/'结论摘要.md').write_text('# 第八阶段结论摘要\n\n研究作者：Keymen（keymen6303-lgtm）。\n\n'+headline+'\n\n'+number_table+'\n'+decisions+'\n\n换读出不改变回忆能力；所有结论限于本合成人工模型。\n',encoding='utf-8')
     shutil.copyfile(ROOT/'readout_protocol.md',reports/'实验协议.md')
     shutil.copyfile(ROOT/'outputs/literature/第八阶段候选_逐轮查新记录.json',reports/'查新记录.json')
     shutil.copyfile(ROOT/'outputs/literature/研究方向查新规则.json',reports/'研究方向查新规则.json')
@@ -238,7 +239,7 @@ def generate():
     decisions_html='<ul>'+''.join(f'<li>{html.escape(RLABELS[d["readout"]])}：联合标准'+('通过' if d['joint_pass'] else '未通过')+'</li>' for d in summary['decisions'])+'</ul>'
     refs_html='<ul>'+''.join(f'<li><a href="{html.escape(s["url"],quote=True)}">{html.escape(s["title"])}</a>：{html.escape(s["established"])}</li>' for s in literature['sources'])+'</ul>'
     webpage='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>固定记忆读出诊断研究结果</title><style>body{font:17px/1.8 system-ui,sans-serif;color:#203244;max-width:1100px;margin:40px auto;padding:0 24px}h1,h2{line-height:1.4}.note{background:#eaf4f5;border-left:5px solid #238587;padding:20px}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}td,th{padding:12px;border:1px solid #ccd5df;text-align:left}img{width:100%;height:auto}figure{margin:30px 0}figcaption{color:#536574}a{color:#1d698b}</style>'''
-    webpage+=f'<h1>固定记忆，新旧判断方式有何影响？</h1><p>第八阶段 · 2026-10-10 · 20校准 + 40新确认种子</p><p class="note"><b>{headline}</b>识别和回忆必须分别评价。下表为固定高能量回放模型的主结果。</p>'+htmltable+decisions_html
+    webpage+=f'<h1>固定记忆，新旧判断方式有何影响？</h1><p>研究作者：Keymen（keymen6303-lgtm）</p><p>第八阶段 · 2026-10-10 · 20校准 + 40新确认种子</p><p class="note"><b>{headline}</b>识别和回忆必须分别评价。下表为固定高能量回放模型的主结果。</p>'+htmltable+decisions_html
     webpage+='<p>联合标准：AUC提高、相似误认下降、旧命中下降不超过1个百分点；9个主终点分别使用99.444%配对区间。部分回忆只计算一次，四种读出共用，因此相同。</p>'
     webpage+='<p>'+html.escape(interpretation)+'</p><p class="note"><b>错误集中在复习过的样本周围。</b>其640个相似未见查询被四种读出全部误认；原读出94.26%的错误来自这里。忽略次数没有解决这组错误。模型保留这些旧样本的精确副本，而其他旧样本只保留旋转表示，产生了明显的相似度取舍。分层和几何解释为探索性。</p>'
     webpage+='<p>整体归一化只平移分数和阈值，所有查询判定保持一致；不能把它当作性能改善。等权和最大相似度的控制含义不同，单独改善不能证明一个唯一原因。</p>'+imageblocks
