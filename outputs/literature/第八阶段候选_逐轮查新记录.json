@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-10",
+  "created_utc": "2026-10-09T17:02:09.208029+00:00",
+  "sources": [
+    {
+      "id": "takeda2026",
+      "title": "Takeda等：能量引导回放（2026预印本）",
+      "url": "https://arxiv.org/html/2605.27975v2",
+      "read": "原文第3至5节及相关附录",
+      "established": "高能量样本更易遗忘，优先回放可减轻重建遗忘；已推进到扩散模型。",
+      "gap": "所核对实验没有直接回答相似未见实例的新旧误认与读出权重之间的关系。"
+    },
+    {
+      "id": "greve2010",
+      "title": "Greve等：同一痕迹、两种提取过程（2010）",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/hipo.20606",
+      "read": "本次出版社摘要及出版信息；全文入口本次读取失败",
+      "established": "同一记忆痕迹可通过不同过程完成熟悉判断和回忆，相关模式的敏感性不同。",
+      "gap": "不能把读出分离本身称为新方法。"
+    },
+    {
+      "id": "cortes2010",
+      "title": "Cortes等：熟悉度的动力学和鲁棒性（2010）",
+      "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/7944549/neco.2009.pdf",
+      "read": "作者机构原文PDF，结果与讨论相关段落",
+      "established": "已经比较能量与能量变化率；判断时刻会影响区分能力。",
+      "gap": "更换分数和判断时间已有先例。"
+    },
+    {
+      "id": "sqhn2024",
+      "title": "Alonso与Krichmar：SQHN（2024）",
+      "url": "https://www.nature.com/articles/s41467-024-46976-4",
+      "alternate": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11065890/",
+      "read": "本次原文搜索可读段落：Experiment: episodic memory、图4；直接全文入口遇到挑战页",
+      "established": "已测试见过、同分布未见和分布外输入；重建表现与实例识别存在区别。",
+      "gap": "不能把“是否见过”任务或同分布相似新输入问题当作新任务；重建误差在文中是诊断指标，不能仅凭该段称为作者实际分类规则。"
+    },
+    {
+      "id": "boosting2024",
+      "title": "Energy-based Hopfield Boosting（NeurIPS 2024）",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/ee20461718669c6c9c5da478d46d60d9-Paper-Conference.pdf",
+      "read": "官方论文第3节与附录H/I相关段落",
+      "established": "已有能量识别分布外输入、调整边界及log-sum-exp与最大相似度的联系。",
+      "gap": "分布外识别不能替代同分布中精确实例的新旧识别；其辅助样本训练不是本次固定记忆的读出诊断。"
+    },
+    {
+      "id": "pcn2025",
+      "title": "Li等：预测编码检测不同层次的新颖性（2025）",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7618029/",
+      "read": "原文搜索可读摘要、Models及讨论段落；直接全文入口遇到挑战页，DOI入口失败",
+      "established": "新颖性检测已经扩展到预测编码及层次表征，并比较现代Hopfield网络。",
+      "gap": "不以“预测误差判断新旧”作为新发明，当前不转向实现完整预测编码模型。"
+    },
+    {
+      "id": "gated2024",
+      "title": "Lindsey与Litwin-Kumar：回忆门控巩固（正式版2024）",
+      "url": "https://elifesciences.org/articles/90793.pdf",
+      "read": "官方PDF搜索可读摘要及正式版日期；PMC原文可读方法相关搜索段落",
+      "established": "已有基于熟悉或回忆表现筛选巩固的机制，并考虑独立熟悉度读出。",
+      "gap": "增加熟悉度门控不具有当然的新颖性；这不是本次要直接复现的模型。"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "candidate": "继续研究优先复习难忘或容易忘的内容",
+      "queries": [
+        "Hopfield familiarity recognition weighted energy reconstruction error replay false recognition",
+        "energy-guided replay false recognition"
+      ],
+      "evidence": [
+        "takeda2026"
+      ],
+      "decision": "已经做过并推进过；不重复把优先回放有效作为新发现。"
+    },
+    {
+      "round": 2,
+      "candidate": "把熟悉判断与细节回忆分开",
+      "queries": [
+        "A single-trace dual-process model familiarity recollection",
+        "Hopfield replay recognition readout",
+        "Hopfield familiarity repetition energy"
+      ],
+      "evidence": [
+        "greve2010",
+        "cortes2010",
+        "gated2024"
+      ],
+      "decision": "已有理论与模型；沿用其区分，问题缩小为我们这次误认的来源。"
+    },
+    {
+      "round": 3,
+      "candidate": "改用重建误差或最大相似度识别新旧",
+      "queries": [
+        "SQHN episodic recognition reconstruction error",
+        "Hopfield reconstruction error recognition familiarity",
+        "Hopfield energy maximum similarity recognition",
+        "Predictive Coding Model Detects Novelty on Different Levels"
+      ],
+      "evidence": [
+        "sqhn2024",
+        "boosting2024",
+        "pcn2025"
+      ],
+      "decision": "相关方法、任务已有；作为诊断对照，不能称为新算法。"
+    },
+    {
+      "round": 4,
+      "candidate": "在固定记忆、固定回忆动力学和匹配回放预算下，分离实例支持集合、逐实例回放权重及读出累加效应",
+      "queries": [
+        "modern Hopfield recognition replay weights",
+        "Hopfield familiarity reweighting",
+        "Hopfield recognition mixture weights",
+        "energy-guided replay episodic recognition",
+        "Hopfield replay lures",
+        "Hopfield recognition uniform weights",
+        "Hopfield replay mass recognition"
+      ],
+      "evidence": [
+        "takeda2026",
+        "sqhn2024",
+        "boosting2024",
+        "gated2024"
+      ],
+      "decision": "在本次有限检索和已核对的原文部分，未找到直接覆盖这些条件的结果。值得作为当前模型的机制诊断；不证明全球首创，也不预先宣称误认是读出造成。"
+    }
+  ],
+  "proposal": {
+    "status": "查新与下一步提案已完成；正式第八阶段实验尚未执行",
+    "question": "第七阶段回放相对无回放增加的相似误认，是哪些模型因素造成的？固定记忆和回忆过程后，改变判断方式能否改善实例识别？",
+    "motivation": "主条件高能量回放误认33.25%，随机34.15%，无回放4.75%；高能量回忆恢复4.525%，随机4.225%。优先选择只带来小幅改善，回放整体误认仍高。",
+    "design": [
+      "先做解析和实现核验：分数S=logsumexp(beta*z·x_i+log a_i)/beta-||z||²/2。所有质量统一除以A时，S变为S-log(A)/beta；当前每条件每组总量固定，组别独立校准阈值也平移。因此AUC与校准后判断不变。这个恒等式不是新发现，也没有新确认实验。",
+      "使用同一组训练向量、缓存、查询和回忆动力学。只更换新旧读出：当前加权能量、对同一支持集合忽略回放次数的等权能量、固定动力学所得重建误差。最大相似度作为已有的实例检索对照。读出等权不能偷偷改变回忆权重。",
+      "在同一支持集合上比较质量2与质量1的读出，估计相对权重作用；再把新增的8条旧向量与没有这8条的读出比较，估计支持集合变化。分数差可沿指定路径精确分解，但误认率差是非线性的，不能当作唯一因果百分比分解。",
+      "区分缓存内与缓存外、簇样本与孤立样本，仅用于评估分层，不能把这些来源标签或最近原始目标作为模型输入。回忆得分不因换读出而提高；需单独记录实际开销。",
+      "先写协议，保留N24、c=.35、theta=.24主条件，原固定64维beta8及回放预算；使用新的20校准种子与40确认种子。校准后冻结每读出阈值，再运行确认。旧种子只做明确标注的事后诊断。",
+      "主要评价AUC、相似误认率与旧命中率，均按种子配对给区间；不能只把阈值提高而漏认更多旧内容当作成功。建议预定AUC改善及误认下降的联合证据，同时检验旧命中最多下降1个百分点的界限；具体比较与多重检验须在正式协议先锁定。"
+    ],
+    "interpretations": [
+      "若等权读出改善，支持相对回放权重参与误认；若最大相似度改善，支持邻居累加的作用。只能支持当前模型与条件下的解释，不能证明人脑机制。",
+      "若这些读出均无改善，下一候选才转向编码或吸引子结构；应先查实例/概念区分和模式分离研究，不能直接宣布新颖。",
+      "若某读出改善但回忆仍在约4%的水平，说明识别诊断有效，不等于记忆整体成功。"
+    ],
+    "limitation": "仅为合成向量的闭式现代Hopfield模型；回放是增加记忆质量，不是测量人体突触或完整训练的神经模型。未获得全部文献全文，网络检索不穷尽。"
+  }
+}

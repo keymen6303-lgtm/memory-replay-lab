@@ -1,0 +1,197 @@
+{
+  "search_date": "2026-10-10",
+  "scope": "公开期刊/出版社原文、PubMed、大学作者PDF和arXiv；沿相关模型继续检索。部分入口失败已使用替代入口，全文可得程度逐项列明。",
+  "limitation": "这是定向查新；公开索引、关键词、无法获取的全文及未公开研究均留下盲区。未找到直接回答不等于没有人做过。未开展穷尽性系统综述或正式科技查新。",
+  "references": [
+    {
+      "id": "profile2004",
+      "year": "2004",
+      "title": "A robust method for distinguishing between learned and spurious attractors",
+      "authors": "Anthony V. Robins; Simon J. R. McCallum",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15037350/",
+      "doi": "10.1016/j.neunet.2003.11.007",
+      "level": "原摘要、出版社引言与方法预览；未获取完整论文",
+      "established": "用各单元的能量分布区分学过的模式和错误吸引子。",
+      "boundary": "说明增加真假记忆读出并非新问题；未据此断言其方法已解决我们的小缓存持续学习任务。"
+    },
+    {
+      "id": "prototype2017",
+      "year": "2017",
+      "title": "Hopfield networks as a model of prototype-based category learning: A method to distinguish trained, spurious, and prototypical attractors",
+      "authors": "Chris Gorman; Anthony Robins; Alistair Knott",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28494329/",
+      "doi": "10.1016/j.neunet.2017.04.007",
+      "level": "原摘要、出版社引言预览；未获取完整论文",
+      "established": "从样本形成未直接训练的类别原型，并研究区分训练模式、错误模式和原型。",
+      "boundary": "“没有见过却能形成有用原型”及三类吸引子区分已有前例。原文有更正：10.1016/j.neunet.2018.05.003；本次确认了更正记录，未读到更正全文，复现前须补齐。"
+    },
+    {
+      "id": "kang2024",
+      "year": "2024",
+      "title": "Distinguishing examples while building concepts in hippocampal and artificial networks",
+      "authors": "Louis Kang; Taro Toyoizumi",
+      "url": "https://www.nature.com/articles/s41467-024-44877-0",
+      "fulltext": "https://toyoizumilab.riken.jp/taro/papers/kang24natcomn.pdf",
+      "doi": "10.1038/s41467-024-44877-0",
+      "level": "作者原PDF摘要、模型与相关结果核对",
+      "established": "结合稀疏去相关与稠密相关编码，兼顾区分具体样本与形成共享概念。",
+      "boundary": "不能把兼顾概念和细节当作新方向；该论文的双通路模型不同于当前单一稠密编码。"
+    },
+    {
+      "id": "sqhn2024",
+      "year": "2024",
+      "title": "A sparse quantized hopfield network for online-continual memory",
+      "authors": "Nick Alonso; Jeff Krichmar",
+      "url": "https://www.nature.com/articles/s41467-024-46976-4",
+      "doi": "10.1038/s41467-024-46976-4",
+      "level": "原论文在线正文：模型、在线持续联想、episodic recognition、层级模型与讨论部分",
+      "established": "测试持续学习、噪声/遮挡回忆和旧样本识别；新样本包含同分布与异分布输入。",
+      "boundary": "“持续学习中既回忆又认出”已做过；其不同层级模型也比较了泛化与识别。不能笼统称联合评价尚无人研究。其原文混合准确率不能直接与我们的目标—相似干扰AUC比较。"
+    },
+    {
+      "id": "daydream2025",
+      "year": "2025正式发表；预印本2024",
+      "title": "Daydreaming Hopfield Networks and their surprising effectiveness on correlated data",
+      "authors": "Ludovica Serricchio 等",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0893608025000954",
+      "fulltext": "https://arxiv.org/html/2405.08777v1",
+      "doi": "10.1016/j.neunet.2025.107216",
+      "level": "期刊摘要与作者预印本算法、相关数据/MNIST结果及讨论核对；未声称逐页核对正式版",
+      "established": "持续强化训练模式，同时反学习网络自行产生的状态；研究相关数据、容量及原型。",
+      "boundary": "“增加清理错误记忆的做梦训练”已做过。预印本讨论持续学习潜力，不能把这一讨论说成已完成所有在线实验。"
+    },
+    {
+      "id": "energy2026",
+      "year": "2026；本次以arXiv v2预印本核对",
+      "title": "Continual Learning in Modern Hopfield Networks with an Application to Diffusion Models",
+      "authors": "Ken Takeda; Masafumi Oizumi; Ryo Karakida",
+      "url": "https://arxiv.org/abs/2605.27975",
+      "fulltext": "https://arxiv.org/html/2605.27975v2",
+      "doi": "10.48550/arXiv.2605.27975",
+      "level": "原文第3–5节、限制及附录D/E/F/G/H核对；未独立验证证明或复现实验",
+      "established": "在给定理论假设下分析高能量孤立样本的遗忘与回放收益，并比较高/低能量及随机回放，实证包含现代Hopfield和扩散模型。",
+      "boundary": "能量引导回放与样本收益/覆盖范围取舍已有推进。检查的原文终点是能量变化和重建遗忘，未发现专门检验未训练相似样本旧/新误认的结果；这只是对该原文范围的判断。未核实最终期刊或会议接收状态。"
+    }
+  ],
+  "decision_rounds": [
+    {
+      "round": 1,
+      "question": "继续调整回放强度或重复次数，是否能更好保留记忆？",
+      "status": "已有密切前例；不作为新问题立项",
+      "basis": "此前已核对Meeter 2003、加权模式2012、CMR-replay 2026等；本项目第六阶段也已完成总幅度匹配。",
+      "advance": "转向具体记忆、泛化和真假识别之间的取舍。"
+    },
+    {
+      "round": 2,
+      "question": "能否既保留具体样本，又提取共同概念？",
+      "status": "已有模型与研究推进",
+      "refs": [
+        "kang2024"
+      ],
+      "advance": "不重新提出双通路概念/细节框架；继续查是否已有真假吸引子区分。"
+    },
+    {
+      "round": 3,
+      "question": "能否辨别真实学过的样本、原型和错误吸引子？",
+      "status": "已有专门研究",
+      "refs": [
+        "profile2004",
+        "prototype2017"
+      ],
+      "advance": "继续问这些能力在持续学习下如何保持。"
+    },
+    {
+      "round": 4,
+      "question": "能否在在线持续学习中同时回忆并认出旧样本？",
+      "status": "已有专门实验，且包括同分布未见样本",
+      "refs": [
+        "sqhn2024",
+        "daydream2025"
+      ],
+      "advance": "不把在线联合任务或做梦清理作为新颖性；继续查回放对象的选择原则。"
+    },
+    {
+      "round": 5,
+      "question": "是否应优先回放容易遗忘、高能量的样本？",
+      "status": "2026原文已有理论与实验推进",
+      "refs": [
+        "energy2026"
+      ],
+      "advance": "沿该文已得到的遗忘保护结果，检验它是否也保护了旧/新识别，而不只改善重建。"
+    },
+    {
+      "round": 6,
+      "question": "在相同缓存和训练预算下，高能量优先回放相对随机/低能量回放，是否改善旧记忆恢复却增加相似未见样本的旧/新误认？这种关系是否随相关性和负荷变化？",
+      "status": "候选研究空缺；本次定向检索未找到直接回答，不能证明从未有人做过",
+      "refs": [
+        "energy2026",
+        "sqhn2024"
+      ],
+      "advance": "先复现最近邻文献的低成本合成基线，再加入未见相似样本识别终点；若发现直接前例则继续从其未解决边界推进。"
+    }
+  ],
+  "reproducible_query_examples": [
+    "Daydreaming Hopfield familiarity recognition false memories",
+    "\"Hopfield networks as a model of prototype-based category learning\" pdf",
+    "\"Hopfield\" \"energy profiles\" \"continual\"",
+    "\"Daydreaming Hopfield\" \"continual learning\"",
+    "\"Hopfield\" \"prototype\" \"recognition\" \"continual learning\"",
+    "\"Hopfield\" \"daydreaming\" \"reservoir\" buffer",
+    "\"A sparse quantized hopfield network for online-continual memory\" nature",
+    "\"Continual Learning in Modern Hopfield Networks with an Application to Diffusion Models\"",
+    "\"SQHN\" \"recognition\" \"memory\" \"budget\"",
+    "\"Hopfield\" \"episodic recognition\" \"false\" lure",
+    "\"Hopfield\" \"recognition\" \"Pareto\" memory",
+    "\"SQHN\" \"similar\" \"recognition\"",
+    "\"sparse quantized\" \"lures\"",
+    "\"Hopfield\" \"prototype\" \"recognition\" \"fixed\" memory budget",
+    "\"Daydreaming\" Hopfield \"recognition\" \"false positive\"",
+    "\"energy-guided replay\" \"recognition\"",
+    "\"high-energy\" \"replay\" \"false\" memory",
+    "\"Hopfield\" \"prioritized replay\" \"familiarity\"",
+    "\"Hopfield\" replay \"lure\" recognition",
+    "memory model energy prioritized replay false recognition similar lures",
+    "Hopfield high energy replay episodic recognition recall discrimination",
+    "\"replay\" \"familiarity\" \"energy\" Hopfield",
+    "\"Continual Learning in Modern Hopfield\" \"recognition\" \"lures\"",
+    "\"high-energy\" \"replay\" \"false recognition\"",
+    "\"energy-guided replay\" \"lures\"",
+    "\"Takeda\" \"Oizumi\" \"Karakida\" \"replay\" \"familiarity\""
+  ],
+  "query_log_note": "实际使用过的部分检索式，便于复查；不是带完整结果的全部工具日志，也不虚报检索命中篇数。",
+  "proposal": {
+    "status": "查新后候选提案，尚未运行新增生产实验；不是完成的运行前确认协议",
+    "title": "高能量优先回放的遗忘保护是否伴随相似新样本误认？",
+    "rationale": "已有第六阶段显示AUC小幅提高与冻结阈值误认增加可同时发生。2026最近邻原文提供能量引导回放的机制与遗忘终点；需要检验这一选择原则对实例身份辨别的适用边界。不能预设它一定导致误认。",
+    "first_action": "复现Takeda等2026的现代Hopfield低成本合成基线与回放收益排序，保留原模型/能量定义；不先运行大扩散模型，不将经典Hebbian代码的改版冒充原文复现。",
+    "model_scope": "主分析在最近邻现代Hopfield模型内做；已有64单元经典模型可作后续迁移检验，须单列，不混合数字或宣称定理适用。SQHN作为联合任务已有前例，当前不堆叠全部架构。",
+    "arms": [
+      "无回放参照",
+      "随机回放",
+      "高能量优先回放",
+      "低能量优先回放"
+    ],
+    "fairness": "三个回放组采用相同缓存槽数、初始模型、任务流、回放时点、事件总数和增益/优化器步数；只改变选中旧样本。缓存选择、抽样选择和在线实现分开成阶段，不能同轮一起改。不能强制回放源一致，因为源选择正是干预。无回放组作参照，不称其更新数相同。",
+    "budget": "记录模型权重、显式记忆向量、缓存、优化器状态、计数器的实际字节；记录能量排序的计算开销。匹配名义步数/幅度不等于相同实际梯度范数或信息量；均需记录。若只是离线任务1的Top-K缓存，明确为离线选择；之后才检验8槽在线候选集版本。",
+    "stimuli": "学习具体旧样本；评估集区分旧样本、同类别/同结构但从未训练的相似实例、无关新样本。身份真值由输入生成记录确定，不能以收敛到熟悉原型当作看过该具体输入。保留并报告编码碰撞；先核实原理论小旋转任务的实例标签是否与新旧识别定义相容。",
+    "factors": "在单因素基础上分别改变训练样本相关性、相似未见样本距离、网络负荷；先固定主条件再扩展。不把未训练类别的OOD检测当作已解决同类新实例误认。",
+    "endpoints": [
+      "旧样本从部分/损坏线索的实例身份恢复",
+      "目标—相似未见样本AUC",
+      "独立校准后冻结阈值下的相似样本误认率及旧样本命中率",
+      "原论文的遗忘能量/重建终点作复现和机制参照"
+    ],
+    "readout": "能量评分与输入—恢复输出的重建差异分开评价。能量符号、归一化、记忆数变化造成的常量均明确记录；不能仅拿训练/选择所用能量下降证明识别改善。原经典模型熟悉分数越大越熟悉，不能直接当作现代模型同符号的高能量。",
+    "controls": "按原文保留未发生任务旋转/漂移的重复加入对照，扣除或单列仅增加样本重复次数导致的能量收益；避免将该机械收益说成防遗忘证据。",
+    "inference": "用与开发分离的种子校准，冻结方案后新种子确认。以种子/独立生成系统为推断单位，避免把一个系统的多查询当独立样本。主比较高能量减随机；低能量和多条件为次要分析或事先控制多重比较。正式协议需先确定资源设置、阈值、样本量、容忍量和置信规则；当前不声称已经预注册。",
+    "interpretations": [
+      "回忆改善且误认下降/非劣：支持该规则在规定资源和刺激范围内兼顾两个目标。",
+      "回忆改善但误认上升，并保有足够旧样本命中：支持遗忘保护与实例辨别存在任务依赖取舍。需跨相关性复验，不能只依据能量本身。",
+      "冻结阈值误认上升但AUC未变：优先检验分数标尺/校准迁移，不能直接归因为记忆内容损坏。",
+      "回忆无可靠改善：先确认原文复现、假设及预算差别，不围绕尚未成立的收益追求新机制。",
+      "各项都无稳定差异：如实报告检验范围和区间；不是发现新机制，不能不断增加变体挑显著。"
+    ],
+    "novelty": "可能贡献是已知能量回放原则对相似实例识别的跨指标适用边界；不是发明优先回放、真假识别或新的人体记忆机制。只有超出前例且确认稳定的结果才形成研究增量。",
+    "literature_gate": "实施前追查最近邻论文引用与后续论文；每次新增候选方法先确认其已知结果、假设和未测终点。若直接前例覆盖本问题，以其结果为基线进一步收窄，更新本记录。此规则不创建自动定时任务。"
+  }
+}

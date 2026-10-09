@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-10",
+  "created_utc": "2026-10-09T17:37:56.151628+00:00",
+  "standing_rule": "研究方向查新规则.json",
+  "sources": [
+    {
+      "id": "takeda2026",
+      "title": "Takeda等：Continual Learning in Modern Hopfield Networks with an Application to Diffusion Models",
+      "year": 2026,
+      "status": "预印本，未核验正式接收",
+      "url": "https://arxiv.org/html/2605.27975v2",
+      "read": "原文第3–6节相关段落，尤其式13、14与限制；此前已核对相关附录；本次亦读取arXiv出版信息",
+      "known": "闭式模型以旋转后的新任务向量与选中旧任务的精确向量组成回放记忆；提出能量引导回放并推进到扩散模型。",
+      "boundary": "所核对部分未直接回答回放源精度与选择策略对相似未见实例误认的交互。不能说其全部研究都没有研究误认。"
+    },
+    {
+      "id": "mccallum2007",
+      "title": "Simon McCallum：Catastrophic Forgetting and the Pseudorehearsal Solution in Hopfield Networks",
+      "year": 2007,
+      "status": "Otago大学博士论文",
+      "url": "https://cs.otago.ac.nz/research/publications/OUCS-thesis1-2007.pdf",
+      "read": "标题、目录，第4章相关噪声参数段落及第6章6.2.1、6.2.2、6.3相关原文（PDF页155–162，正文页142–149）",
+      "known": "已比较带噪与不带噪伪回放，也把能量比筛选与带噪回放结合；盲目给伪样本加噪并不一定改善记忆。",
+      "boundary": "旧式网络中的能量比是识别学过模式的统计量，不等于现代Hopfield绝对能量的top-K排序；噪声训练及稳定模式数量也不等于本项目固定回放源角误差及相似新样本误认。"
+    },
+    {
+      "id": "robins1998",
+      "title": "Robins与McCallum：Catastrophic Forgetting and the Pseudorehearsal Solution in Hopfield-type Networks",
+      "year": 1998,
+      "status": "Connection Science论文",
+      "url": "https://www.tandfonline.com/doi/pdf/10.1080/095400998116530",
+      "read": "出版社搜索返回的原文方法、注释段落；本次不声称完整阅读全文",
+      "known": "Hopfield类网络的伪回放、噪声训练及遗忘问题早已有研究。",
+      "boundary": "不能把加噪回放或旧样本保护本身包装成新方法。"
+    },
+    {
+      "id": "sdc2020",
+      "title": "Yu等：Semantic Drift Compensation for Class-Incremental Learning",
+      "year": 2020,
+      "status": "CVPR",
+      "url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Yu_Semantic_Drift_Compensation_for_Class-Incremental_Learning_CVPR_2020_paper.html",
+      "read": "官方原文页面搜索可读摘要；本次直接打开HTML/PDF失败",
+      "known": "估计并补偿旧类原型的特征漂移，避免必须保存旧样本。",
+      "boundary": "类别分类与可训练编码器漂移不是本项目固定编码器下的数据旋转及精确实例新旧识别。"
+    },
+    {
+      "id": "ldc2024",
+      "title": "Gomez-Villa等：Exemplar-free Continual Representation Learning via Learnable Drift Compensation",
+      "year": 2024,
+      "status": "ECCV",
+      "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01192.pdf",
+      "read": "官方18页PDF的方法及消融相关段落，旧/新编码器投影与原型补偿",
+      "known": "用可学习投影补偿原型漂移，并对投影形式及有样本补偿基线做比较。",
+      "boundary": "对齐变样的表征本身已有答案；本提案不发明或直接照搬其完整分类算法。"
+    },
+    {
+      "id": "cfdc2025",
+      "title": "Cotogni等：Exemplar-Free Continual Learning of Vision Transformers via Gated Class-Attention and Cascaded Feature Drift Compensation",
+      "year": 2025,
+      "status": "IJCV正式版，2025-03-13发表",
+      "url": "https://link.springer.com/article/10.1007/s11263-025-02374-x",
+      "read": "出版社搜索返回的摘要、方法3.3–3.5、消融4.3及出版信息；非逐页全文复核",
+      "known": "漂移补偿推进到ViT的级联投影、类别注意力门控及降低推理开销的蒸馏。",
+      "boundary": "说明相关方向已有进一步推进，不是本项目精度匹配回放实验的直接结果。"
+    },
+    {
+      "id": "cadc2026",
+      "title": "Xu等：Class-Aware Drift Compensation for Non-Uniform Semantic Shift in Continual Learning",
+      "year": 2026,
+      "status": "CVPR Findings，不能写成CVPR主会论文",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026F/html/Xu_Class-Aware_Drift_Compensation_for_Non-Uniform_Semantic_Shift_in_Continual_Learning_CVPRF_2026_paper.html",
+      "read": "官方搜索可读摘要与书目信息；直接打开页面失败，未阅读全文及复核全部实验",
+      "known": "进一步处理不同类别漂移幅度不一致，采用按类别补偿与漂移引导蒸馏。",
+      "boundary": "表征变化不均衡已有研究；未由该摘要得到本项目的相似实例误认答案。"
+    },
+    {
+      "id": "evolving2022",
+      "title": "Schnaack、Peliti与Nourmohammad：Learning and Organization of Memory for Evolving Patterns",
+      "year": 2022,
+      "status": "Physical Review X 12, 021063",
+      "url": "https://arxiv.org/abs/2106.02186",
+      "read": "作者arXiv摘要及作者PDF搜索可读摘要；本次PDF直接打开失败",
+      "known": "已有随模式变化学习的Hopfield记忆理论，分析追踪变化与误分类的权衡。",
+      "boundary": "其演化模式类别任务不等同于本项目相似未见实例的新旧识别；不能称记忆变化导致错误为新现象。"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "candidate": "记忆表示变化是否造成误认",
+      "queries": [
+        "episodic recognition memory replay buffer false positives representation drift exact memories similar lures",
+        "\"Hopfield\" \"representation drift\" \"recognition\"",
+        "\"memory replay\" \"false recognition\" computational model"
+      ],
+      "sources": [
+        "evolving2022",
+        "takeda2026"
+      ],
+      "decision": "广义问题已有研究，不能作为新发现；转向可检验的精度不均衡。"
+    },
+    {
+      "round": 2,
+      "candidate": "把变样的旧记忆重新对齐",
+      "queries": [
+        "\"continual learning\" \"feature drift\" \"compensation\" exemplars",
+        "\"Semantic Drift Compensation\" \"CVPR\" 2020",
+        "\"Exemplar-free Continual Representation Learning via Learnable Drift Compensation\"",
+        "\"Learning and Organization of Memory for Evolving Patterns\"",
+        "site:openaccess.thecvf.com \"Class-Aware Drift Compensation\"",
+        "site:link.springer.com \"Gated Class-Attention\" \"2025\""
+      ],
+      "sources": [
+        "sdc2020",
+        "ldc2024",
+        "cfdc2025",
+        "cadc2026"
+      ],
+      "decision": "补偿和非均匀漂移处理已从2020推进至2026；不把对齐算法作为未经查新的发明。当前旋转也不等于编码器漂移，先诊断环境假设。"
+    },
+    {
+      "round": 3,
+      "candidate": "给优先回放样本加入噪声",
+      "queries": [
+        "\"Hopfield\" \"replay\" \"noisy\"",
+        "\"generative replay\" \"fidelity\" \"recognition\"",
+        "\"Hopfield\" \"pseudorehearsal\" distorted patterns",
+        "McCallum Robins energy ratio pseudorehearsal noise 2007 recognition"
+      ],
+      "sources": [
+        "robins1998",
+        "mccallum2007"
+      ],
+      "decision": "带噪伪回放及能量比筛选结合噪声已有先例；不能把组合本身称为创新，能量指标也不可混同。"
+    },
+    {
+      "round": 4,
+      "candidate": "取消精确旧副本优势，在相同预算下检验高能量选择对实例恢复与误认的作用是否仍然存在",
+      "queries": [
+        "\"energy-guided replay\" \"noisy\" recognition",
+        "\"high-energy\" \"replay\" \"fidelity\"",
+        "\"Hopfield\" \"replay\" \"similar lures\"",
+        "\"Hopfield\" \"replay\" \"imperfect\" recognition",
+        "\"Hopfield\" \"replay fidelity\" recognition",
+        "\"Hopfield\" \"replay\" \"false positives\" rotation",
+        "\"energy-guided replay\" \"noise\" \"lures\"",
+        "\"episodic recognition\" \"replay\" \"drift\""
+      ],
+      "sources": [
+        "takeda2026",
+        "mccallum2007"
+      ],
+      "decision": "有限检索及已读取原文中未找到直接覆盖精度匹配、固定选择、相似未见实例误认与部分线索恢复联合评价的结果。保留为本模型的假设检验，不宣称全球首创。"
+    },
+    {
+      "round": 5,
+      "candidate": "再次核对精度匹配与能量筛选的具体交集及更早相关工作",
+      "queries": [
+        "\"energy-guided replay\" \"fidelity\"",
+        "\"Hopfield\" \"replay\" \"source\" \"false recognition\"",
+        "\"Hopfield\" \"replay\" \"matched\" \"noise\"",
+        "\"energy-guided replay\" \"recognition\"",
+        "\"replay\" \"fidelity\" \"false recognition\" Hopfield"
+      ],
+      "sources": [
+        "mccallum2007",
+        "takeda2026"
+      ],
+      "decision": "确认2007年能量比与噪声已有结合，但非相同指标、模型和终点；未取得当前窄问题的直接答案。推荐有限的对照研究，不开展无限参数扫描。"
+    }
+  ],
+  "proposal": {
+    "status": "已完成下一步候选查新与研究设计；第九阶段正式协议和实验尚未执行",
+    "question": "当复习的8条旧内容不再享有精确原始副本、其偏移幅度与其他旧内容相当时，高能量优先复习的实例恢复收益和相似误认是否仍然存在？",
+    "purpose": "检验第八阶段的精度不均衡解释，界定能量回放结论的适用条件。属于现有模型的机制诊断与稳健性检验，不是新算法。",
+    "observed_basis": {
+      "stage8_main_fa": 0.3395,
+      "replayed_parent_lures_misrecognized": 640,
+      "replayed_parent_lures_total": 640,
+      "fraction_errors_from_replayed_parents": 0.9425625920471281,
+      "old_partial_identity": 0.0475,
+      "interpretation": "这些事后观察提示一个解释，但尚未证明精度不均衡是唯一原因。"
+    },
+    "fixed": [
+      "N=24、相关程度c=.35、64维、beta=8、旋转eps=.05和相似新样本theta=.24",
+      "25条新任务基础向量、8条回放源、64次事件及回放总质量16；各回放组具有相同存储条数与预算",
+      "旧阶段能量定义、每策略选出的旧内容编号及对应事件表；改变源精度时不重新排序",
+      "同一组测试查询、部分线索及原加权读出；最大相似度只作已知诊断对照"
+    ],
+    "source_controls": [
+      {
+        "name": "精确旧副本",
+        "definition": "回放X_i，复现当前条件。",
+        "distinct_supports": 33
+      },
+      {
+        "name": "同一旋转副本",
+        "definition": "回放Y_i=V X_i，与基础记忆一致。",
+        "distinct_supports": 25,
+        "caution": "它重复现有支持点，改变了独立支持点数量；不能单靠这一组把结果归因于精度。"
+      },
+      {
+        "name": "等角度、独立方向副本",
+        "definition": "令phi_i=acos(X_i·Y_i)，取与X_i正交的独立单位方向u_i，回放cos(phi_i)X_i+sin(phi_i)u_i。偏移角度逐项匹配，但方向不同。",
+        "distinct_supports": 33,
+        "caution": "方向RNG与相似新查询生成RNG分离；这是利用已知合成真值进行的环境控制，不是学会补偿漂移的算法，也不能把已知逆旋转当成学习能力。"
+      }
+    ],
+    "analytical_checks": [
+      "同一旋转副本在最大相似度读出下不增加新的支持点，因此该分数应与无回放基线相同；若独立校准数据也相同，则阈值及识别判断亦相同。这是恒等式核验，不计为实验发现。",
+      "加权读出下重复Y_i仍增加其质量，不能据最大相似度恒等式断言所有读出都不受回放影响。",
+      "独立方向副本是否与现有向量重合、范数及匹配角度需数值核验；这些核验不以识别标签决定重新生成。"
+    ],
+    "comparisons": [
+      "主要检验：精确源与独立方向等角度源之间，误认/AUC/旧命中及部分实例恢复的配对变化。",
+      "在每种源内比较高能量与随机回放，并估计其差异在不同源之间的变化，以区分选择策略与精确源条件；低能量和同一旋转源作为对照。",
+      "无回放仅作25条基础向量参考，清楚标注其预算低于回放组，不称为匹配预算组。"
+    ],
+    "execution_if_authorized": [
+      "先写正式协议并锁定主要比较、多重检验和界限，再运行新校准与新确认种子；候选规模为20校准、40确认种子，正式编号尚未分配。",
+      "各源×策略组独立以同样旧目标分位数校准阈值，校准后冻结，确认集不可调参；旧结果种子不作新的确认样本。",
+      "以种子为统计单位配对给区间，不把同种子的查询当独立样本。报告缓存内外及簇/孤立样本分层，但不把来源标签输入识别器。",
+      "同时记录误认、旧命中、AUC、部分实例恢复与新任务保留。误认减少若伴随旧内容大量漏认或恢复变差，只能称为代价交换；任何改善声明的联合标准应在协议中先锁定。"
+    ],
+    "decision_rules": [
+      "若独立方向等角度源也消除误认集中，且旧命中与恢复没有对应恶化，支持精确源不均衡参与了当前错误；不能证明人脑机制或唯一原因。",
+      "若误认下降伴随旧命中/恢复下降，记录权衡，不称成功修复。",
+      "若等角度条件仍保持误认集中，或选择策略效应仍存在，则当前精度解释不足，需要报告其边界。后续编码/模式分离等方向须重新查新，不在本提案中直接许诺。"
+    ],
+    "worth_doing": "值得做：这是成本有限、可推翻当前解释的控制研究。即使否定精度解释，也能避免把实验设定造成的效果误当回放的一般规律。",
+    "novelty_boundary": "检索未找到直接答案不等于无人做过。现有文献未全部全文可读，未系统穷尽所有引用链；不宣称全球首次、人体机制、真实突触模拟或完整漂移补偿算法。"
+  }
+}
