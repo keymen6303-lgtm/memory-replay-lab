@@ -1,0 +1,13 @@
+{
+  "all_evaluation_read_only": true,
+  "replay_events_64": true,
+  "replay_mass_16": true,
+  "replay_slots_8": true,
+  "equal_replay_bytes": true,
+  "no_new_training_collision": true,
+  "frozen_thresholds_match": true,
+  "no_nonfinite_scores": true,
+  "convergence_fraction": 0.9997758438818566,
+  "all_judgments_reconstructed": true,
+  "events_reconstruct_buffers_and_masses": true
+}
